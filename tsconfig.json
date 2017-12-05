@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "allowJs": true,
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types", "typings"]
+  },
+  "compileOnSave": false,
+  "include": [
+    "./src/ts"
+  ]
+}
