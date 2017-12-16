@@ -144,6 +144,35 @@ textarea.materialize-textarea {
   transition: .2s opacity ease-out, .2s color ease-out;
 }
 
+// Gutter spacing
+@media #{$xsmall-and-down} {
+  .input-field {
+    &.col {
+      label {
+        left: $gutter-width-xsmall / 2;
+      }
+
+      .prefix ~ label,
+      .prefix ~ .validate ~ label {
+        width: calc(100% - 3rem - #{$gutter-width-xsmall});
+      }
+    }
+  }
+}
+@media #{$small-and-up} {
+  .input-field {
+    &.col {
+      label {
+        left: $gutter-width-small / 2;
+      }
+
+      .prefix ~ label,
+      .prefix ~ .validate ~ label {
+        width: calc(100% - 3rem - #{$gutter-width-small});
+      }
+    }
+  }
+}
 
 // Styling for input field wrapper
 .input-field {
@@ -156,18 +185,6 @@ textarea.materialize-textarea {
     input,
     .select-dropdown {
       margin-bottom: 1rem;
-    }
-  }
-
-  // Gutter spacing
-  &.col {
-    label {
-      left: $gutter-width / 2;
-    }
-
-    .prefix ~ label,
-    .prefix ~ .validate ~ label {
-      width: calc(100% - 3rem - #{$gutter-width});
     }
   }
 
