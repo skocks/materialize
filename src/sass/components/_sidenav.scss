@@ -1,3 +1,17 @@
+.sidenav-fixed {
+  header, main, footer {
+    padding-left: 300px;
+  }
+}
+
+@media #{$medium-and-down} {
+  .sidenav-fixed {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+}
+
 .sidenav {
   position: fixed;
   width: 300px;
@@ -30,12 +44,20 @@
     margin: 0;
   }
 
-
-  li {
+  .collapsible > li {
     float: none;
     line-height: $sidenav-line-height;
 
-    &.active { background-color: rgba(0,0,0,.05); }
+    &.active {
+      background-color: rgba(0, 0, 0, .05);
+    }
+  }
+
+  .collapsible-body li.active {
+    background-color: $primary-color;
+    a {
+      color: $sidenav-bg-color;
+    }
   }
 
   li > a {
@@ -47,7 +69,9 @@
     line-height: $sidenav-line-height;
     padding: 0 ($sidenav-padding * 2);
 
-    &:hover { background-color: rgba(0,0,0,.05);}
+    &:hover {
+      background-color: rgba(0, 0, 0, .05);
+    }
 
     &.btn, &.btn-large, &.btn-flat, &.btn-floating {
       margin: 10px 15px;
@@ -55,12 +79,20 @@
 
     &.btn,
     &.btn-large,
-    &.btn-floating { color: $button-raised-color; }
-    &.btn-flat { color: $button-flat-color; }
+    &.btn-floating {
+      color: $button-raised-color;
+    }
+    &.btn-flat {
+      color: $button-flat-color;
+    }
 
     &.btn:hover,
-    &.btn-large:hover { background-color: lighten($button-raised-background, 5%); }
-    &.btn-floating:hover { background-color: $button-raised-background; }
+    &.btn-large:hover {
+      background-color: lighten($button-raised-background, 5%);
+    }
+    &.btn-floating:hover {
+      background-color: $button-raised-background;
+    }
 
     & > i,
     & > [class^="mdi-"], li > a > [class*="mdi-"],
@@ -70,10 +102,9 @@
       line-height: $sidenav-line-height;
       margin: 0 ($sidenav-padding * 2) 0 0;
       width: $sidenav-item-height / 2;
-      color: rgba(0,0,0,.54);
+      color: rgba(0, 0, 0, .54);
     }
   }
-
 
   .divider {
     margin: ($sidenav-padding / 2) 0 0 0;
@@ -86,7 +117,7 @@
 
     cursor: initial;
     pointer-events: none;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
     font-size: $sidenav-font-size;
     font-weight: 500;
     line-height: $sidenav-line-height;
@@ -98,7 +129,9 @@
     margin-bottom: $sidenav-padding / 2;
 
     & > a {
-      &:hover { background-color: transparent; }
+      &:hover {
+        background-color: transparent;
+      }
       height: auto;
       padding: 0;
     }
@@ -140,7 +173,6 @@
   }
 }
 
-
 // Touch interaction
 .drag-target {
   // Right Align
@@ -155,31 +187,34 @@
   z-index: 998;
 }
 
-
 // Fixed Sidenav shown
-.sidenav.sidenav-fixed {
-  // Right Align
-  &.right-aligned {
-    right: 0;
-    left: auto;
-  }
+.sidenav-fixed {
+  .sidenav {
+    // Right Align
+    &.right-aligned {
+      right: 0;
+      left: auto;
+    }
 
-  left: 0;
-  transform: translateX(0);
-  position: fixed;
+    left: 0;
+    transform: translateX(0);
+    position: fixed;
+  }
 }
 
 // Fixed Sidenav hide on smaller
 @media #{$medium-and-down} {
-  .sidenav {
-    &.sidenav-fixed {
+  .sidenav-fixed {
+    .sidenav {
       transform: translateX(-105%);
 
       &.right-aligned {
         transform: translateX(105%);
       }
     }
+  }
 
+  .sidenav {
     a {
       padding: 0 $sidenav-padding;
     }
@@ -187,30 +222,21 @@
     .user-view {
       padding: $sidenav-padding $sidenav-padding 0;
     }
+
   }
-}
-
-
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
-.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: $primary-color;
-  a {
-    color: $sidenav-bg-color;
+  .sidenav .collapsible-body {
+    padding: 0;
   }
-}
-.sidenav .collapsible-body {
-  padding: 0;
-}
 
-
-.sidenav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  height: 120vh;
-  background-color: rgba(0,0,0,.5);
-  z-index: 2000;
-  display: none;
+  .sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2000;
+    display: none;
+  }
 }
