@@ -3,10 +3,12 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const entryPointsPathPrefix = 'src';
+const sourcesPrefix = 'src';
+const docsPrefix = 'docs';
 module.exports = {
   entry: {
-    'materialize-strict': path.resolve(__dirname, entryPointsPathPrefix, 'index.ts')
+    'materialize-strict': path.resolve(__dirname, sourcesPrefix, 'index.ts'),
+    'docs/main': path.resolve(__dirname, docsPrefix, 'index.ts')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -22,6 +24,11 @@ module.exports = {
   },
   module: {
     loaders: [
+      {
+        test: /\.pug$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: ['file-loader?name=[path][name].html', 'pug-html-loader']
+      },
       {
         test: /\.ts$/,
         exclude: /(node_modules|bower_components)/,
@@ -73,8 +80,14 @@ module.exports = {
         drop_console: false
       }
     }),
-    new ExtractTextPlugin('materialize-strict.css'),
+    new ExtractTextPlugin('[name].css'),
     new CleanWebpackPlugin(['dist'])
   ],
-  devtool: 'source-map'
+  devtool: 'source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist/docs'),
+    compress: true,
+    host: '0.0.0.0',
+    port: 8181
+  }
 };

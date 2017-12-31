@@ -1,0 +1,44 @@
+include includes/globals
+- hasNavbar=true
+- const page='datatable'
+- const pageTitle='Data Table'
+
+doctype html
+html(lang="en")
+  head
+    include includes/head
+  body.sidenav-fixed
+    include includes/navigation
+    main
+      .container
+        .section
+          h3 Basic Data Table
+
+          p.
+            This data table only visualizes it's data, without any possibilities of selecting or manipulating data.
+
+          table
+            thead
+              tr
+                th Name
+                th Item Name
+                th.numeric Item Price ($)
+            tbody
+              tr
+                td Alvin
+                td Eclair
+                td.numeric $0.87
+              tr
+                td Alan
+                td Jellybean
+                td.numeric $3.76
+              tr
+                td Jonathan
+                td Lollipop
+                td.numeric $7.00
+              tr
+                td Shannon
+                td KitKat
+                td.numeric $9.99
+    include includes/footer
+    include includes/scripts

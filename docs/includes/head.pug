@@ -1,0 +1,27 @@
+meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+meta(name='msapplication-tap-highlight', content='no')
+
+if meta_descript
+  meta(name='description', content='#{meta_descript}')
+else
+  meta(name='description', content='materialize-strict is a modern responsive CSS framework implementing the Material Design by Google as strict as possible.')
+
+if page
+  title #{pageTitle} - Materialize
+else
+  title Documentation - Materialize
+
+// Favicons
+link(rel='apple-touch-icon-precomposed', href='images/favicon/apple-touch-icon-152x152.png')
+meta(name='msapplication-TileColor', content='#FFFFFF')
+meta(name='msapplication-TileImage', content='images/favicon/mstile-144x144.png')
+link(rel='icon', href='images/favicon/favicon-32x32.png', sizes='32x32')
+
+//  Android 5 Chrome Color
+meta(name='theme-color', content='#EE6E73')
+// CSS
+link(href='main.css', type='text/css', rel='stylesheet', media='screen,projection')
+link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+link(href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet')
