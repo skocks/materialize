@@ -1,0 +1,36 @@
+include includes/globals
+- hasNavbar=true
+- const page='lists'
+- const pageTitle='Lists'
+
+doctype html
+html(lang="en")
+  head
+    include includes/head
+  body.sidenav-fixed
+    include includes/navigation
+    main
+      .container
+        .section
+          h3 Basic List
+          p.
+            This list only visualizes a basic 2 line list rendering.
+          .list.twoline
+            .row
+              .content
+                .title Alvin Eclair
+                | Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            .row
+              .content
+                .title Alan Jellybean
+                | Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            .row
+              .content
+                .title Jonathan Lollipop
+                | Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+            .row
+              .content
+                .title Shannon KitKat
+                | Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+    include includes/footer
+    include includes/scripts

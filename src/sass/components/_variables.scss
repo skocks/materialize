@@ -291,7 +291,7 @@ $tabs-text-color: $primary-color !default;
 $tabs-bg-color: #fff !default;
 
 
-// 18. Tables
+// Tables
 // ==========================================================================
 
 $table-header-color: rgba(0,0,0,.54) !default;
@@ -307,6 +307,28 @@ $table-content-row-height: 48px;
 $table-border-color: rgba(0,0,0,.12) !default;
 $table-highlight-color: rgba(238, 238, 238, 0.5) !default;
 
+// Lists
+// ==========================================================================
+
+$list-vertical-padding: 8px;
+$list-horizontal-padding: 16px;
+
+$list-row-vertical-padding: 20px;
+
+$list-twoline-tile-height: 72px;
+$list-threeline-tile-height: 88px;
+
+$list-avatar-width: 56px;
+
+$list-primary-font-size: 1.6rem;
+$list-primary-line-height: 1.6rem;
+$list-primary-font-weight: 500;
+$list-primary-color: rgba(0,0,0,.87) !default;
+
+$list-secondary-font-size: 1.4rem;
+$list-secondary-font-weight: 500;
+$list-secondary-line-height: 1.6rem;
+$list-secondary-color: rgba(0,0,0,.54) !default;
 
 // 19. Toasts
 // ==========================================================================

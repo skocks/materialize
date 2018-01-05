@@ -1,0 +1,39 @@
+.list {
+  padding: $list-vertical-padding $list-horizontal-padding;
+
+  .row {
+    width: 100%;
+    padding-top: $list-row-vertical-padding;
+    padding-bottom: $list-row-vertical-padding;
+    margin: 0;
+
+    .avatar {
+      width: $list-avatar-width;
+      vertical-align: center;
+    }
+    .title {
+      font-size: $list-primary-font-size;
+      font-weight: $list-primary-font-weight;
+      line-height: $list-primary-line-height;
+      color: $list-primary-color;
+    }
+    .content {
+      font-size: $list-secondary-font-size;
+      font-weight: $list-secondary-font-weight;
+      line-height: $list-secondary-line-height;
+      color: $list-secondary-color;
+    }
+  }
+}
+.list {
+  &.twoline {
+    .row {
+      height: $list-twoline-tile-height;
+    }
+  }
+  &.threeline {
+    .row {
+      height: $list-threeline-tile-height;
+    }
+  }
+}
