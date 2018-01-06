@@ -3,7 +3,7 @@
   "description": "This project aims towards a more strict implementation of Googles Material Design, than original materialize-css.",
   "author": "Alvin Wang, Alan Chang, Sebastian Kocks",
   "homepage": "https://www.wesotion.com/materialize",
-  "version": "1.0.0-alpha6",
+  "version": "1.0.0-alpha7",
   "main": "dist/materialize-strict.js",
   "style": "dist/materialize-strict.css",
   "sass": "src/sass/materialize.scss",
@@ -68,10 +68,9 @@
     "webpack-dev-server": "2.7.1"
   },
   "files": [
-    "dist",
-    "src/**/*.ts",
-    "src/**/*.scss",
-    "LICENSE"
+    "/dist",
+    "/src/**/*.ts",
+    "/src/**/*.scss"
   ],
   "ava": {
     "files": [
