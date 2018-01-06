@@ -1,7 +1,7 @@
 .list {
   padding: $list-vertical-padding $list-horizontal-padding;
 
-  .row {
+  .list-row {
     width: 100%;
     padding-top: $list-row-vertical-padding;
     padding-bottom: $list-row-vertical-padding;
@@ -27,13 +27,17 @@
 }
 .list {
   &.twoline {
-    .row {
+    .list-row {
       height: $list-twoline-tile-height;
     }
   }
   &.threeline {
-    .row {
+    .list-row {
       height: $list-threeline-tile-height;
     }
   }
+}
+
+.col .list {
+  padding: $list-vertical-padding $nested-list-horizontal-padding;
 }

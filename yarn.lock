@@ -52,6 +52,10 @@
     "@types/tough-cookie" "*"
     parse5 "^3.0.2"
 
+"@types/node-waves@^0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@types/node-waves/-/node-waves-0.7.3.tgz#ad5d3fc79dcb95fb55d22c9c2fcb44fca55e231d"
+
 "@types/node@*", "@types/node@^8.0.57":
   version "8.0.57"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.57.tgz#e5d8b4dc112763e35cfc51988f4f38da3c486d99"
@@ -4012,6 +4016,10 @@ node-sass@^4.7.2:
 node-watch@^0.3.4:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/node-watch/-/node-watch-0.3.5.tgz#a07f253a4f538de9d4ca522dd7f1996eeec0d97e"
+
+node-waves@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/node-waves/-/node-waves-0.7.5.tgz#be15bccc685544cb9e68c8f922b57fb802d95cff"
 
 nodemon@^1.12.5:
   version "1.12.5"

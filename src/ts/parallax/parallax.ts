@@ -71,11 +71,6 @@ class Parallax extends CashObject<ParallaxElement> {
 
   private handleImageLoad() {
     this.update();
-    for (const img of this.$img) {
-      if (img.complete) {
-        $(img).trigger('load');
-      }
-    }
   }
 
   private update() {

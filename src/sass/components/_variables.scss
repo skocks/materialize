@@ -312,6 +312,7 @@ $table-highlight-color: rgba(238, 238, 238, 0.5) !default;
 
 $list-vertical-padding: 8px;
 $list-horizontal-padding: 16px;
+$nested-list-horizontal-padding: 8px;
 
 $list-row-vertical-padding: 20px;
 
@@ -358,6 +359,9 @@ $h3-fontsize-small: 2.4rem !default;
 $h4-fontsize-small: 2.0rem !default;
 $h5-fontsize-small: 2.0rem !default;
 $h6-fontsize-small: 1.6rem !default;
+
+$text-horizontal-padding: 16px;
+$nested-text-horizontal-padding: 8px;
 
 // 21. Footer
 // ==========================================================================
