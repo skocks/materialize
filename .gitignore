@@ -44,7 +44,6 @@ css/ghpages-materialize.css
 bin/
 
 _dist/
-dist/
 .nyc_output/
 coverage/
 *.tgz
