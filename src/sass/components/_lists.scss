@@ -6,6 +6,11 @@
     padding-top: $list-row-vertical-padding;
     padding-bottom: $list-row-vertical-padding;
     margin: 0;
+    border-bottom: $list-border;
+
+    &:first-child {
+      border-top: $list-border;
+    }
 
     .avatar {
       width: $list-avatar-width;

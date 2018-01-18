@@ -310,25 +310,28 @@ $table-highlight-color: rgba(238, 238, 238, 0.5) !default;
 // Lists
 // ==========================================================================
 
-$list-vertical-padding: 8px;
-$list-horizontal-padding: 16px;
-$nested-list-horizontal-padding: 8px;
+$list-vertical-padding: 8px !default;
+$list-horizontal-padding: 16px !default;
+$nested-list-horizontal-padding: 8px !default;
+$list-border-color: color("grey", "base") !default;
+$list-border: 1px solid $list-border-color !default;
 
-$list-row-vertical-padding: 20px;
 
-$list-twoline-tile-height: 72px;
-$list-threeline-tile-height: 88px;
+$list-row-vertical-padding: 20px !default;
 
-$list-avatar-width: 56px;
+$list-twoline-tile-height: 72px !default;
+$list-threeline-tile-height: 88px !default;
 
-$list-primary-font-size: 1.6rem;
-$list-primary-line-height: 1.6rem;
-$list-primary-font-weight: 500;
+$list-avatar-width: 56px !default;
+
+$list-primary-font-size: 1.6rem !default;
+$list-primary-line-height: 1.6rem !default;
+$list-primary-font-weight: 500 !default;
 $list-primary-color: rgba(0,0,0,.87) !default;
 
-$list-secondary-font-size: 1.4rem;
-$list-secondary-font-weight: 500;
-$list-secondary-line-height: 1.6rem;
+$list-secondary-font-size: 1.4rem !default;
+$list-secondary-font-weight: 500 !default;
+$list-secondary-line-height: 1.6rem !default;
 $list-secondary-color: rgba(0,0,0,.54) !default;
 
 // 19. Toasts
