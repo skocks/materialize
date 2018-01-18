@@ -5,10 +5,11 @@
     "lib": ["es6", "dom"],
     "allowJs": true,
     "sourceMap": true,
-    "typeRoots": ["node_modules/@types", "typings"]
+    "typeRoots": ["node_modules/@types", "typings"],
+    "downlevelIteration": true
   },
   "compileOnSave": false,
   "include": [
-    "./src/ts"
+    "./src/"
   ]
 }

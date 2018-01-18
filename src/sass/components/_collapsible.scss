@@ -4,34 +4,37 @@
   border-left: 1px solid $collapsible-border-color;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   @extend .z-depth-1;
-}
 
-.collapsible-header {
-  display: flex;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  line-height: 1.5;
-  padding: 1rem;
-  background-color: $collapsible-header-color;
-  border-bottom: 1px solid $collapsible-border-color;
+  .collapsible-header {
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: $collapsible-header-color;
+    border-bottom: 1px solid $collapsible-border-color;
 
-  i {
-    width: 2rem;
-    font-size: 1.6rem;
-    display: inline-block;
-    text-align: center;
-    margin-right: 1rem;
+    i {
+      width: 2rem;
+      font-size: 1.6rem;
+      display: inline-block;
+      text-align: center;
+      margin-right: 1rem;
+    }
+  }
+
+  .collapsible-body {
+    padding: 8px;
+    border-bottom: 1px solid $collapsible-border-color;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .active > .collapsible-body {
+    display: block;
   }
 }
 
-.collapsible-body {
-  display: none;
-  border-bottom: 1px solid $collapsible-border-color;
-  box-sizing: border-box;
-  padding: 2rem;
-}
-
-// Sidenav collapsible styling
 .sidenav,
 .sidenav.fixed {
 
@@ -64,8 +67,6 @@
   }
 
 }
-
-// Popout Collapsible
 
 .collapsible.popout {
   border: none;

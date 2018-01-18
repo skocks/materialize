@@ -4,14 +4,16 @@ import './css/index.scss';
 
 import './index.pug';
 
+import './collapsible.pug';
 import './datatable.pug';
 import './lists.pug';
 
-import '../src/ts/index';
+import {Collapsible} from '../src/ts';
 
 import * as Waves from 'node-waves';
 
-$(document).ready(() => {
+document.addEventListener('DOMContentLoaded', () => {
   Waves.init();
   $('.sidenav').sidenav();
+  Collapsible.initialize();
 });

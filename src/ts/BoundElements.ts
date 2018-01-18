@@ -26,7 +26,13 @@ export default class BoundElements {
     target.addEventListener(event, boundHandler, capture);
   }
 
-  public clear(target: EventTarget) {
+  public clearAll() {
+    for (const current of this.targets) {
+      this.clear(current);
+    }
+  }
+
+  public clear(target: EventTarget = null) {
     const index: number = this.targets.indexOf(target);
     if (index > -1) {
       const boundHandlers = this.index[index];
