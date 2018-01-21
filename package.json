@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "materialize-strict-workspace",
+  "version": "1.0.0-alpha7",
   "devDependencies": {
     "lerna": "^2.7.1",
     "webpack-dev-server": "^2.7.1"
