@@ -15,7 +15,8 @@
     "downlevelIteration": true
   },
   "compileOnSave": false,
+  "extends": "../../tsconfig.json",
   "include": [
-    "./src/"
+    "./src/ts"
   ]
 }
